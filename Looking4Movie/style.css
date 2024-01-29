@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a88f2b;
+    color: white;
+    padding: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tea a:hover, .tea a:visited, .tea a:link, .tea a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* conteneur searchbar */
+#search-container {
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 325px;
+    height: 50px;
+}
+
+/* input et bouton à côté l'un de l'autre */
+input[type="text"], button {
+    margin: 0;
+    border: none;
+    height: 50px;
+}
+
+input[type="text"] {
+    padding-left: 20px;
+    border-radius: 25px 0 0 25px;
+    font-size: 15px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e4d4d;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 50px;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 960px;
+}
+
+
+.film-item {
+    flex-basis: 20%;
+    margin: 10px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    font-size: 15px;
+    width: 185px;
+    height: 425px; 
+}
+
+.film-item img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+}
+
+.film-item:hover {
+    background-color: #f9f9f9;
+}
+
+#details {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+/* Media Query pour les écrans de PC (largeur de 960px et plus) */
+@media (min-width: 960px) {
+    header {
+        flex-direction: row; 
+        justify-content: space-around;
+        padding: 30px; 
+    }
+
+    #search-container {
+        width: 325px;
+        margin-bottom: 0;
+    }
+
+    #results {
+        justify-content: space-around; 
+        padding: 50px; 
+        width: auto; 
+        max-width: 1200px; 
+        margin: 50px auto; 
+    }
+
+    .film-item {
+        width: 185px;
+        height: 490px; 
+        margin: 10px; 
+        padding: 20px;
+    }
+}
+
+/* Media Query pour les écrans de téléphone (largeur jusqu'à 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; 
+        padding: 15px; 
+        width: 570px;
+    }
+
+    .tea {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 3em; 
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    #search-container {
+        width: 90%; 
+        margin: 0 auto 20px; 
+        justify-content: center;
+    }
+
+    input[type="text"], button {
+        height: 40px; 
+    }
+
+    #results {
+        padding: 10px; 
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .film-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .film-item img {
+        height: auto;
+    }
+
+    #details {
+        padding: 10px; 
+    }
+}
